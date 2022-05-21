@@ -4,11 +4,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Get Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <i class="wi wi-night-sleet"></i>
+
 </head>
+
 <body>
-    <input  type="text" id="city-name">
-    <button  id="submit">Get Weather</button>
+    <header class="bg-gray-100 shadow-lg ">
+        <!-- Jumbotron -->
+        <div class="text-center bg-gray-50 text-gray-800 py-20 px-6">
+          <h1 class="text-5xl font-bold mt-0 mb-6">Weather</h1>
+          <h3 class="text-3xl font-bold mb-8">Dashboard</h3>
+                    
+        <!-- Nav -->
+        
+          <input  type="text"  class="form-control px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="city-name">
+          <a id="submit" class=" px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">
+              Get Weather</a>
+ 
+        </div>
+
+     </header>
+     <br>
+     <!-- Storaged cities -->
+    <div class="flex space-x-2 justify-center">
+        <button class="text-s inline-block py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-gray-200 text-gray-700 rounded">New York</button>
+        <button class="text-s inline-block py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-gray-200 text-gray-700 rounded">San Diego</button>
+        <button class="text-s inline-block py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-gray-200 text-gray-700 rounded">Los Angeles</button>
+        <button class="text-s inline-block py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-gray-200 text-gray-700 rounded">Paris</button>
+        <button class="text-s inline-block py-2 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-gray-200 text-gray-700 rounded">Vien</button>
+    </div>
+      <br>
+<!-- current search -->
+    <main id="mainCard">      
+    </main> 
+    <br>  
+
+
+
+<!-- 5 days forecast -->
+<section>
+    <!-- Five columns -->
+    <div class="flex justify-between">
+       
+    <!-- Cards-------------------- -->
+        <!-- 1st card -->
+        <div class="w-1/5 h-12">
+            <div class="flex justify-center">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                    <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt=""/>
+                </a>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">City Name</h5>
+                    <p class="text-gray-700 text-base mb-4">Temp: 73.72</p>
+                    <p class="text-gray-700 text-base mb-4">wind: 9.53MPH</p>
+                    <p class="text-gray-700 text-base mb-4">Humidity: 66%</p>
+                 </div>
+                </div>
+              </div>
+        </div>
+        <!-- 2nd card -->
+        <div class="w-1/5 h-12">
+            <div class="flex justify-center">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                    <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt=""/>
+                </a>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">City Name</h5>
+                    <p class="text-gray-700 text-base mb-4">Temp: 73.72</p>
+                    <p class="text-gray-700 text-base mb-4">wind: 9.53MPH</p>
+                    <p class="text-gray-700 text-base mb-4">Humidity: 66%</p>
+                 </div>
+                </div>
+              </div>
+        </div>
+        <!-- 3rd card -->
+        <div class="w-1/5 h-12">
+            <div class="flex justify-center">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                    <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt=""/>
+                </a>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">City Name</h5>
+                    <p class="text-gray-700 text-base mb-4">Temp: 73.72</p>
+                    <p class="text-gray-700 text-base mb-4">wind: 9.53MPH</p>
+                    <p class="text-gray-700 text-base mb-4">Humidity: 66%</p>
+                 </div>
+                </div>
+              </div>
+        </div>
+        <!-- 4th card -->
+        <div class="w-1/5 h-12">
+            <div class="flex justify-center">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                    <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt=""/>
+                </a>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">City Name</h5>
+                    <p class="text-gray-700 text-base mb-4">Temp: 73.72</p>
+                    <p class="text-gray-700 text-base mb-4">wind: 9.53MPH</p>
+                    <p class="text-gray-700 text-base mb-4">Humidity: 66%</p>
+                 </div>
+                </div>
+              </div>
+        </div>
+        <!-- 5th card -->
+        <div class="w-1/5 h-12">
+            <div class="flex justify-center">
+                <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                    <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt=""/>
+                </a>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">City Name</h5>
+                    <p class="text-gray-700 text-base mb-4">Temp: 73.72</p>
+                    <p class="text-gray-700 text-base mb-4">wind: 9.53MPH</p>
+                    <p class="text-gray-700 text-base mb-4">Humidity: 66%</p>
+                 </div>
+                </div>
+              </div>
+        </div> 
+
+
+    </div>
+</section>
+
+
+    
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
