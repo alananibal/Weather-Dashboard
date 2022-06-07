@@ -51,9 +51,9 @@ var getWeather = function(city) {
                </a>
                  <div class="p-6">
                    <h5 class="text-gray-900 text-xl font-medium mb-2">${fiveDaysdata.daily[0].dt}</h5>
-                   <p class="text-gray-700 text-base mb-4">Temp: 73.72</p>
-                   <p class="text-gray-700 text-base mb-4">wind: 9.53MPH</p>
-                   <p class="text-gray-700 text-base mb-4">Humidity: 66%</p>
+                   <p class="text-gray-700 text-base mb-4">Temp: ${fiveDaysdata.daily[0].temp.day}</p>
+                   <p class="text-gray-700 text-base mb-4">wind: ${fiveDaysdata.daily[0].wind_speed}H</p>
+                   <p class="text-gray-700 text-base mb-4">Humidity: ${fiveDaysdata.daily[0].humidity}</p>
                 </div>
                </div>
              </div>
