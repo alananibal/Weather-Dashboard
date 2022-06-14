@@ -1,10 +1,13 @@
 
 var city = document.getElementById("city-name");
 var submitBtn = document.getElementById("submit");
+
 var apiKey = "dcedd9f791ada71e5f432709b3e26b95";
 
 var mainCardContainer = document.getElementById("mainCard")
 var cardsContainer = document.getElementById("cardsContainer")
+var citiesContainer = document.getElementById("citiesContainer")
+var citiesData = [] //local Storage
 
 var getWeather = function(city) {
 
@@ -40,7 +43,7 @@ var getWeather = function(city) {
         </div>
        
        `
-            
+       
 
         let dia = fiveDaysdata.daily[1].dt * 1000;
     //    var formatedDia = moment(dia).format('MMMM Do, YYYY');
@@ -76,5 +79,30 @@ var getWeather = function(city) {
 
 submitBtn.addEventListener("click",function(e){
     e.preventDefault();
+
     getWeather(city.value);
+
+    var cityName = city.value;
+    console.log(cityName)
+    localStorage.setItem(citiesData, JSON.stringify(cityName));
+    console.log(citiesData);
+    
+
+
     });
+
+
+    
+
+
+// var loadCities = function() {
+//     if(localStorage.getItem('citiesData')) {
+//         cidade = localStorage.getItem('citySearch').split(';');
+//         for (var i = 0; i < 5; i++) {
+            
+//             console.log(cidade)
+            
+//         }}
+    
+// } 
+
