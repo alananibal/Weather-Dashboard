@@ -40,6 +40,14 @@ var getWeather = function(city) {
         </div>
        
        `
+            
+
+        let dia = fiveDaysdata.daily[1].dt * 1000;
+    //    var formatedDia = moment(dia).format('MMMM Do, YYYY');
+    //    console.log(dia); console.log(formatedDia);
+       let vento = fiveDaysdata.daily[1].wind_speed; 
+       let temperatura = fiveDaysdata.daily[1].temp.day;
+       let humidade = fiveDaysdata.daily[1].humidity    
 
        cardsContainer.innerHTML=
        ` <!--  card -->
@@ -50,10 +58,10 @@ var getWeather = function(city) {
                    <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt=""/>
                </a>
                  <div class="p-6">
-                   <h5 class="text-gray-900 text-xl font-medium mb-2">${fiveDaysdata.daily[0].dt}</h5>
-                   <p class="text-gray-700 text-base mb-4">Temp: ${fiveDaysdata.daily[0].temp.day}</p>
-                   <p class="text-gray-700 text-base mb-4">wind: ${fiveDaysdata.daily[0].wind_speed}H</p>
-                   <p class="text-gray-700 text-base mb-4">Humidity: ${fiveDaysdata.daily[0].humidity}</p>
+                   <h5 class="text-gray-900 text-xl font-medium mb-2">${dia}</h5>
+                   <p class="text-gray-700 text-base mb-4">Temp: ${temperatura}</p>
+                   <p class="text-gray-700 text-base mb-4">wind: ${vento}H</p>
+                   <p class="text-gray-700 text-base mb-4">Humidity: ${humidade}</p>
                 </div>
                </div>
              </div>
